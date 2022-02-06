@@ -1,0 +1,174 @@
+@import "src/sass/variables"
+.night
+  background: url("./../../images/NightSky.jpg") no-repeat !important
+  background-size: cover !important
+
+.Databox
+  z-index: 1
+  transition: 1s
+  transform: translateY(110%)
+  display: grid
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 1fr 1fr
+  color: gray
+  font-size: 2rem
+  font-weight: 800
+  @include media-break(500px, max)
+    grid-template-columns: initial
+    grid-template-rows: 1fr 1fr 1fr 1fr
+
+  div
+    @include media-break(500px, max)
+      padding: 5% 0 0 10%
+
+    padding: 7% 0 0 20%
+
+    span
+      display: inline-block
+      font-size: calc(2rem + 1vw)
+      color: black
+      margin-top: 1rem
+
+    h1
+      font-size: calc(1rem + 0.5vw)
+
+
+.active
+  @include media-break(550px, max)
+    padding-bottom: 40vh !important
+
+  padding-bottom: 35vh !important
+
+  .Databox
+    transform: translateY(0) !important
+
+  article
+    @include media-break(550px, max)
+  //margin-bottom: 15vh
+  //margin-bottom: 15vh
+
+  section
+    margin-bottom: 5vh
+
+  button
+    bottom: 41vh
+
+.Databox
+  bottom: 0
+  left: 0
+  position: absolute
+  background-color: white
+  width: 100%
+  height: 40vh
+
+button
+  transition: 1s
+  cursor: pointer
+  position: fixed
+  bottom: 5vh
+  right: 10vw
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.5rem
+  width: 11rem
+  height: 4rem
+  background-color: white
+  color: gray
+  border: black 0.1rem solid
+  border-radius: 2rem
+  z-index: 21
+  font-size: 1.6rem
+  font-weight: 800
+  @include media-break(550px, max)
+    bottom: 1vh
+    right: initial
+    left: 5vw
+
+  img
+    height: 80%
+
+main::after
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.21)
+  font-family: Inter, sans-serif
+
+main
+  transition: 1s
+
+  position: relative
+  width: 100%
+  height: 100%
+  background: #000000 url("./../../images/dayForest.jpg") no-repeat
+  background-size: cover
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  color: white
+  padding-bottom: 2%
+  @include media-break(550px, max)
+    padding-bottom: 5rem
+
+  article
+    position: relative
+    font-size: calc(1.2rem + 0.7vw)
+    width: 80%
+    z-index: 12
+    display: flex
+    flex-wrap: wrap
+    padding-top: 5vh
+    @include media-break(1024px, max)
+      width: 90%
+
+    p
+      margin-top: 2vh
+      width: 100%
+      font-weight: 800
+      margin-left: 2rem
+
+    img
+      position: absolute
+      left: 50%
+      width: 3rem
+      height: 3rem
+      cursor: pointer
+      margin-left: 2rem
+      @include media-break(1024px, max)
+        left: initial
+        position: relative
+
+    span
+      @include media-break(1024px, max)
+        max-width: 80%
+      max-width: 50%
+
+  section
+    transition: 1s
+
+    width: 80%
+    z-index: 1
+    @include media-break(1024px, max)
+      width: 90%
+
+    p
+      font-size: calc(1.5rem + 1vw)
+      font-weight: 400
+
+    span
+      font-size: calc(7rem + 5vw)
+      font-weight: bold
+      font-family: sans-serif
+
+    div
+      display: inline-block
+      transform: translateY(-10%)
+      margin-left: calc(1rem + 1vw)
+      padding: 0
+      font-size: calc(2rem + 2vw)
+      font-weight: 400
